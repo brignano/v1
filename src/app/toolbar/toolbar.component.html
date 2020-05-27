@@ -1,10 +1,12 @@
 <mat-toolbar color="primary">
-  <span>Anthony Brignano</span>
+  <span>
+    <img src="assets/icons/icon-64x64.png" alt="Anthony Brignano" fxFlex/>
+  </span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <span fxFlex></span>
 
-  <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-  <a mat-button routerLink="/resume" routerLinkActive="active">Resume</a>
+  <a mat-button href="#home" aria-label="Home section">Home</a>
+  <a mat-button href="#resume" aria-label="Resume section">Resume</a>
 <!--  <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>-->
 </mat-toolbar>
