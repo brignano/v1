@@ -15,13 +15,12 @@ import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [ AppComponent, ToolbarComponent, HomeComponent, FooterComponent, ResumeComponent ],
+  declarations: [ AppComponent, ToolbarComponent, HomeComponent, ResumeComponent ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

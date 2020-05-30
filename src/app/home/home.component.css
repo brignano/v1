@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento|Patrick+Hand&display=swap");
+section#home h1.mat-display-3 span {
+  font-family: 'Sacramento', cursive;
+  font-weight: normal; }
+section#home h1.mat-display-3 {
+  margin-bottom: 16px; }
+section#home .mat-display-3,
+section#home .mat-typography .mat-display-3,
+section#home .mat-headline,
+section#home .mat-typography .mat-headline {
+  font-family: 'Patrick Hand', cursive !important; }
+
+/*# sourceMappingURL=home.component.css.map */
