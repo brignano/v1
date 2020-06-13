@@ -12,19 +12,19 @@ export class AppComponent {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer){
     this.matIconRegistry.addSvgIcon(
       `github`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/social-media-icons/github.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/social-media-icons/github.svg')
     );
     this.matIconRegistry.addSvgIcon(
       `linkedin`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/social-media-icons/linkedin.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/social-media-icons/linkedin.svg')
     );
     this.matIconRegistry.addSvgIcon(
       `twitter`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/social-media-icons/twitter.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/social-media-icons/twitter.svg')
     );
     this.matIconRegistry.addSvgIcon(
       `facebook`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/social-media-icons/facebook.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/social-media-icons/facebook.svg')
     );
   }
 }
