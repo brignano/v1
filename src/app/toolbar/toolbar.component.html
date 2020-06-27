@@ -1,11 +1,10 @@
-<mat-toolbar style="background-color: transparent;">
+<mat-toolbar [ngStyle]="{'background-color': isNavbarTransparent ? 'transparent' : 'black'}">
   <mat-toolbar-row>
     <span [ngStyle.lt-md]="['margin: auto;']">
-    <a aria-label="Home" [routerLink]="['']" [routerLinkActive]="['active']" fragment="home" mat-button>Home</a>
-    <a aria-label="Resume" [routerLink]="['']" [routerLinkActive]="['active']" fragment="resume" mat-button>Resume</a>
-    <a aria-label="Projects" [routerLink]="['']" [routerLinkActive]="['active']" fragment="projects"
-       mat-button>Projects</a>
-      </span>
+      <a aria-label="Home" [routerLink]='"."' fragment="home" mat-button>Home</a>
+      <a aria-label="Resume" [routerLink]='"."' fragment="resume" mat-button>Resume</a>
+      <a aria-label="Projects" [routerLink]='"."' fragment="projects" mat-button>Projects</a>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>
 

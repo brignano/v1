@@ -17,8 +17,12 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { ExtraOptions, RouterModule } from '@angular/router';
 
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+};
 
 @NgModule({
   declarations: [ AppComponent, ToolbarComponent, HomeComponent, ResumeComponent ],
@@ -35,7 +39,7 @@ import { RouterModule } from '@angular/router';
         MatIconModule,
         MatListModule,
         HttpClientModule,
-        RouterModule.forRoot([])
+        RouterModule.forRoot([], routerOptions)
     ],
   providers: [ ],
   bootstrap: [ AppComponent ]
