@@ -1,14 +1,11 @@
-<mat-toolbar color="primary">
-  <span>
-    <img src="assets/icons/icon-64x64.png" alt="Anthony Brignano" fxFlex/>
-  </span>
-
-  <!-- This fills the remaining space of the current row -->
-  <!--
-  <span fxFlex></span>
-
-  <a mat-button href="#home" aria-label="Home section">Home</a>
-  <a mat-button href="#resume" aria-label="Resume section">Resume</a>
-  <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
-  -->
+<mat-toolbar style="background-color: transparent;">
+  <mat-toolbar-row>
+    <span [ngStyle.lt-md]="['margin: auto;']">
+    <a aria-label="Home" [routerLink]="['']" [routerLinkActive]="['active']" fragment="home" mat-button>Home</a>
+    <a aria-label="Resume" [routerLink]="['']" [routerLinkActive]="['active']" fragment="resume" mat-button>Resume</a>
+    <a aria-label="Projects" [routerLink]="['']" [routerLinkActive]="['active']" fragment="projects"
+       mat-button>Projects</a>
+      </span>
+  </mat-toolbar-row>
 </mat-toolbar>
+

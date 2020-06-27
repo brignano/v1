@@ -17,25 +17,27 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [ AppComponent, ToolbarComponent, HomeComponent, ResumeComponent ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-    CommonModule,
-    MatToolbarModule,
-    LayoutModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    HttpClientModule
-  ],
-  providers: [],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+        CommonModule,
+        MatToolbarModule,
+        LayoutModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        HttpClientModule,
+        RouterModule.forRoot([])
+    ],
+  providers: [ ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
