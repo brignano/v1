@@ -5,14 +5,38 @@ import { animate, style, transition, trigger } from '@angular/animations';
   selector: 'app-toolbar',
   animations: [
     trigger(
-      'enterAnimation', [
+      'enterAnimation_Home', [
         transition(':enter', [
           style({transform: 'translateY(-100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateY(0)', opacity: 1}))
+          animate('1000ms', style({transform: 'translateY(0)', opacity: 1}))
         ]),
         transition(':leave', [
           style({transform: 'translateY(0)', opacity: 1}),
-          animate('500ms', style({transform: 'translateY(-100%)', opacity: 0}))
+          animate('1000ms', style({transform: 'translateY(-100%)', opacity: 0}))
+        ])
+      ]
+    ),
+    trigger(
+      'enterAnimation_Resume', [
+        transition(':enter', [
+          style({transform: 'translateY(-100%)', opacity: 0}),
+          animate('1250ms', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('1250ms', style({transform: 'translateY(-100%)', opacity: 0}))
+        ])
+      ]
+    ),
+    trigger(
+      'enterAnimation_Projects', [
+        transition(':enter', [
+          style({transform: 'translateY(-100%)', opacity: 0}),
+          animate('1500ms', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('1500ms', style({transform: 'translateY(-100%)', opacity: 0}))
         ])
       ]
     )
@@ -31,7 +55,6 @@ export class ToolbarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset;
-
     this.isNavbarTransparent = scrollPosition <= 0;
   }
 
