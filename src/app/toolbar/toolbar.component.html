@@ -1,4 +1,4 @@
-<mat-toolbar [color]="isNavbarTransparent ? null : 'primary'">
+<mat-toolbar [color]="isNavbarTransparent ? null : 'primary'" [@enterAnimation]>
   <mat-toolbar-row>
     <span [ngStyle.lt-md]="['margin: auto;']">
       <a aria-label="Home" [routerLink]='"."' fragment="home" mat-button>Home</a>
