@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -45,17 +45,10 @@ import { animate, style, transition, trigger } from '@angular/animations';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  isNavbarTransparent = true;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const scrollPosition = window.pageYOffset;
-    this.isNavbarTransparent = scrollPosition <= 0;
   }
 
 }
