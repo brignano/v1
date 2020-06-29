@@ -15,14 +15,14 @@ import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
-import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProjectsModule } from './projects/projects.module';
+import { ResumeModule } from './resume/resume.module';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, HomeComponent, ResumeComponent, PageNotFoundComponent, ProjectsComponent],
+  declarations: [AppComponent, ToolbarComponent, HomeComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -36,7 +36,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ResumeModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
