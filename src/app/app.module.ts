@@ -17,30 +17,12 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ExtraOptions, RouterModule } from '@angular/router';
-
-const routerOptions: ExtraOptions = {
-  // In order to get anchor / fragment scrolling to work at all, we need to
-  // enable it on the router.
-  anchorScrolling: 'enabled',
-
-  // Once the above is enabled, the fragment link will only work on the
-  // first click. This is because, by default, the Router ignores requests
-  // to navigate to the SAME URL that is currently rendered. Unfortunately,
-  // the fragment scrolling is powered by Navigation Events. As such, we
-  // have to tell the Router to re-trigger the Navigation Events even if we
-  // are navigating to the same URL.
-  onSameUrlNavigation: 'reload',
-
-  // Let's enable tracing so that we can see the aforementioned Navigation
-  // Events when the fragment is clicked.
-  enableTracing: true,
-  scrollPositionRestoration: 'enabled',
-  scrollOffset: [0, 64]
-};
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, HomeComponent, ResumeComponent],
+  declarations: [AppComponent, ToolbarComponent, HomeComponent, ResumeComponent, PageNotFoundComponent, ProjectsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -54,7 +36,7 @@ const routerOptions: ExtraOptions = {
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    RouterModule.forRoot([], routerOptions)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

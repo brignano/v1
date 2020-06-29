@@ -1,5 +1,8 @@
-<div fxFlex fxLayout="column">
+<div fxFlexFill fxLayout="column">
+  <div>
     <app-toolbar></app-toolbar>
-    <app-home fxFlexFill></app-home>
-    <app-resume id="resume"></app-resume>
+  </div>
+  <div fxFlex id="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

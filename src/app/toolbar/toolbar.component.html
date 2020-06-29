@@ -1,9 +1,9 @@
 <mat-toolbar [ngClass]="isNavbarTransparent ? 'transparent' : 'opaque'">
   <mat-toolbar-row>
     <span>
-      <a aria-label="Home" [routerLink]='"."' fragment="home" mat-button [@enterAnimation_Home]>Home</a>
-      <a aria-label="Resume" [routerLink]='"."' fragment="resume" mat-button [@enterAnimation_Resume]>Resume</a>
-      <a aria-label="Projects" [routerLink]='"."' fragment="projects" mat-button [@enterAnimation_Projects]>Projects</a>
+      <a aria-label="Home" [routerLink]='"home"' [routerLinkActive]='"mat-accent"' mat-button [@enterAnimation_Home]>Home</a>
+      <a aria-label="Resume" [routerLink]='"resume"' [routerLinkActive]='"mat-accent"' mat-button [@enterAnimation_Resume]>Resume</a>
+      <a aria-label="Projects" [routerLink]='"projects"' [routerLinkActive]='"mat-accent"' mat-button [@enterAnimation_Projects]>Projects</a>
     </span>
   </mat-toolbar-row>
 </mat-toolbar>
