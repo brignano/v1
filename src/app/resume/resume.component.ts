@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
@@ -7,6 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ResumeComponent implements OnInit {
+  @HostBinding('class') class = 'router-flex';
 
   constructor() { }
 

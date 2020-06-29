@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : null" (click)="drawer.toggle();">
+    <mat-nav-list>
+      <a mat-list-item aria-label="Home" [routerLink]='"home"' [routerLinkActive]='"color-primary"'>Home</a>
+      <a mat-list-item aria-label="Resume" [routerLink]='"resume"' [routerLinkActive]='"color-primary"'>Resume</a>
+      <a mat-list-item aria-label="Projects" [routerLink]='"projects"' [routerLinkActive]='"color-primary"'>Projects</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div fxLayout="column" fxFill>
+      <app-toolbar [hidden]="(isHandset$ | async)"></app-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle();"
+        onclick="this.blur();"
+        *ngIf="isHandset$ | async"
+        [hidden]="(isHandset$ | async) === false">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <main fxFlex fxLayout="column">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

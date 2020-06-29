@@ -9,7 +9,6 @@ import { environment } from '../environments/environment';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
@@ -20,9 +19,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectsModule } from './projects/projects.module';
 import { ResumeModule } from './resume/resume.module';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, HomeComponent, PageNotFoundComponent],
+  declarations: [AppComponent, ToolbarComponent, HomeComponent, PageNotFoundComponent, SidenavComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,13 +33,13 @@ import { ResumeModule } from './resume/resume.module';
     MatToolbarModule,
     LayoutModule,
     MatButtonModule,
-    MatSidenavModule,
     MatIconModule,
     MatListModule,
     HttpClientModule,
     AppRoutingModule,
     ResumeModule,
-    ProjectsModule
+    ProjectsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

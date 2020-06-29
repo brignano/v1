@@ -1,1 +1,5 @@
-<p>projects works!</p>
+<section fxFill fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+  <div fxFlex="50" *ngFor="let project of projects" class="card-item">
+    <app-project [ngStyle]="{'width':'300' + 'px'}" [project]="project"></app-project>
+  </div>
+</section>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResumeComponent } from './resume.component';
 import { ResumeRoutingModule } from './resume-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -9,7 +10,8 @@ import { ResumeRoutingModule } from './resume-routing.module';
   declarations: [ResumeComponent],
   imports: [
     CommonModule,
-    ResumeRoutingModule
+    ResumeRoutingModule,
+    FlexLayoutModule
   ]
 })
 export class ResumeModule { }
