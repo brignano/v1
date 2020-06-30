@@ -1,27 +1,17 @@
-@font-face {
-  font-family: 'Patrick Hand';
-  src: url(../../assets/fonts/PatrickHand-Regular.ttf) format("truetype");
-  font-weight: 300;
+h1 {
+  &.mat-display-2,
+  &.mat-display-4 {
+    margin-bottom: 0;
+  }
 }
-@font-face {
-  font-family: 'Sacramento';
-  src: url(../../assets/fonts/Sacramento-Regular.ttf) format("truetype");
-  font-weight: 300;
+
+h2 {
+  &.mat-headline {
+    margin-bottom: 0;
+  }
 }
-section#home {
-  h1.mat-display-3 span {
-    font-family: 'Sacramento', cursive;
-    font-weight: normal;
-  }
 
-  h1.mat-display-3 {
-    margin-bottom: 16px;
-  }
-
-  .mat-display-3,
-  .mat-typography .mat-display-3,
-  .mat-headline,
-  .mat-typography .mat-headline {
-    font-family: 'Patrick Hand', cursive !important;
-  }
+#description {
+  margin-top: -.35px;
+  margin-bottom: 0;
 }
