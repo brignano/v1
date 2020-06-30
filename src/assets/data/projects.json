@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Website",
+    "repository": "https://www.github.com/brignano/website",
+    "url": "https://brignano.io",
+    "technologies": [
+      "Angular Universal 10",
+      "Angular Material 10"
+    ],
+    "description": {
+      "short": "Personal <strikethrough>playground</strikethrough>... I mean website*",
+      "long": ""
+    }
+  }
+]

@@ -1,27 +1,116 @@
 @font-face {
-  font-family: 'Patrick Hand';
-  src: url(../../assets/fonts/PatrickHand-Regular.ttf) format("truetype");
+  font-family: 'Raleway';
+  src: url(../../assets/fonts/Raleway-Regular.ttf) format("truetype");
   font-weight: 300;
 }
-@font-face {
-  font-family: 'Sacramento';
-  src: url(../../assets/fonts/Sacramento-Regular.ttf) format("truetype");
-  font-weight: 300;
+
+section {
+  padding: 0 1em;
 }
-section#home {
-  h1.mat-display-3 span {
-    font-family: 'Sacramento', cursive;
-    font-weight: normal;
+
+h1 {
+  &.mat-display-2,
+  &.mat-display-4 {
+    margin-bottom: 0;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.1rem;
+  }
+}
+
+h2 {
+  &.mat-headline {
+    margin-bottom: 0;
+  }
+}
+
+p#description {
+  margin: 0 0 0 -152px;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.135rem;
+  line-height: 0;
+  font-size: 0.5rem;
+  min-width: 50vw;
+  // Desktop styles
+  @media(min-width: 411px) {
+    margin-right: -20px;
+  }
+  @media(min-width: 768px) {
+    margin-right: -195px;
+  }
+  @media(min-width: 960px) {
+    margin-right: 35px;
+    font-size: 1rem;
+  }
+  @media(min-width: 1024px) {
+    margin-right: -25px;
+  }
+  @media(min-width: 1025px) {
+    margin-right: -355px;
+  }
+  @media(max-width: 364px) {
+    margin-left: 8px;
+  }
+  @media(max-width: 320px) {
+    margin-left: 27px;
+  }
+}
+
+.mat-flat-button {
+  width: 95%;
+  margin-top: 2em;
+  // Desktop styles
+  @media(min-width: 960px) {
+    margin-left: auto;
+    margin-right: 13px;
+    margin-top: -4px;
+    width: 25%;
   }
 
-  h1.mat-display-3 {
-    margin-bottom: 16px;
+  &:hover {
+    background-color: rgb(33, 33, 31);
+    transition: all 0.5s ease;
+  }
+}
+
+.mat-icon {
+  height: 13px;
+  // Desktop styles
+  @media(min-width: 960px) {
+    height: 20px;
   }
 
-  .mat-display-3,
-  .mat-typography .mat-display-3,
-  .mat-headline,
-  .mat-typography .mat-headline {
-    font-family: 'Patrick Hand', cursive !important;
+  &#twitter {
+    &:hover,
+    &:active {
+      color: #1da1f2;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#facebook {
+    &:hover,
+    &:active {
+      color: #3b5998;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#github {
+    &:hover,
+    &:active {
+      opacity: 0.6;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#linkedin {
+    &:hover,
+    &:active {
+      color: #1a85bc;
+      transition: all 0.5s ease;
+    }
   }
 }

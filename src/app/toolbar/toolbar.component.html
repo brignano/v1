@@ -1,11 +1,8 @@
-<mat-toolbar style="background-color: transparent;">
-  <mat-toolbar-row>
-    <span [ngStyle.lt-md]="['margin: auto;']">
-    <a aria-label="Home" [routerLink]="['']" [routerLinkActive]="['active']" fragment="home" mat-button>Home</a>
-    <a aria-label="Resume" [routerLink]="['']" [routerLinkActive]="['active']" fragment="resume" mat-button>Resume</a>
-    <a aria-label="Projects" [routerLink]="['']" [routerLinkActive]="['active']" fragment="projects"
-       mat-button>Projects</a>
-      </span>
+<mat-toolbar>
+  <mat-toolbar-row fxLayout="row">
+      <a aria-label="Home" [routerLink]='"home"' [routerLinkActive]='"mat-primary"' mat-button [@enterAnimation_Home]>Home</a>
+      <a aria-label="Resume" [routerLink]='"resume"' [routerLinkActive]='"mat-primary"' mat-button [@enterAnimation_Resume]>Resume</a>
+<!--      <a aria-label="Projects" [routerLink]='"projects"' [routerLinkActive]='"mat-primary"' mat-button [@enterAnimation_Projects]>Projects</a>-->
   </mat-toolbar-row>
 </mat-toolbar>
 

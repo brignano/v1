@@ -2,3 +2,8 @@
 
 html, body, app-root { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.router-flex {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}

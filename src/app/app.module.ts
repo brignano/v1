@@ -9,35 +9,40 @@ import { environment } from '../environments/environment';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
-import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ProjectsModule } from './projects/projects.module';
+import { ResumeModule } from './resume/resume.module';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
-  declarations: [ AppComponent, ToolbarComponent, HomeComponent, ResumeComponent ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        FlexLayoutModule,
-        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-        CommonModule,
-        MatToolbarModule,
-        LayoutModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        HttpClientModule,
-        RouterModule.forRoot([])
-    ],
-  providers: [ ],
-  bootstrap: [ AppComponent ]
+  declarations: [AppComponent, ToolbarComponent, HomeComponent, PageNotFoundComponent, SidenavComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    CommonModule,
+    MatToolbarModule,
+    LayoutModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ResumeModule,
+    ProjectsModule,
+    MatSidenavModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
