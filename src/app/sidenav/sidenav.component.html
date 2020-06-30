@@ -10,8 +10,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div fxLayout="column" fxFill>
-<!--      <app-toolbar [hidden]="(isHandset$ | async)"></app-toolbar>-->
-      <!--
+      <app-toolbar [hidden]="(isHandset$ | async)"></app-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -22,7 +21,6 @@
         [hidden]="(isHandset$ | async) === false">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      -->
       <main fxFlex fxLayout="column">
         <router-outlet></router-outlet>
       </main>
