@@ -25,46 +25,37 @@ h2 {
 }
 
 p#description {
-  margin: 0 0 0 -152px;
+  margin: 0 auto 0 0;
   font-family: monospace;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.135rem;
   line-height: 0;
   font-size: 0.5rem;
-  min-width: 50vw;
-  // Desktop styles
-  @media(min-width: 411px) {
-    margin-right: -20px;
+  @media(max-width: 374px) {
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
   }
   @media(min-width: 768px) {
-    margin-right: -195px;
+    font-size: 0.51rem;
   }
   @media(min-width: 960px) {
-    margin-right: 35px;
-    font-size: 1rem;
-  }
-  @media(min-width: 1024px) {
-    margin-right: -25px;
-  }
-  @media(min-width: 1025px) {
-    margin-right: -355px;
-  }
-  @media(max-width: 364px) {
-    margin-left: 8px;
-  }
-  @media(max-width: 320px) {
-    margin-left: 27px;
+    font-size: 1.3rem;
+    margin-left: 8%;
   }
 }
 
 .mat-flat-button {
-  width: 95%;
-  margin-top: 2em;
+  width: 90%;
+  margin-top: 3em;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   // Desktop styles
+  @media(min-width: 768px) {
+    margin-right: 1.5%;
+    margin-top: 2em;
+  }
   @media(min-width: 960px) {
     margin-left: auto;
-    margin-right: 13px;
     margin-top: -4px;
     width: 25%;
   }
