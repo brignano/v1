@@ -1,7 +1,19 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url(../../assets/fonts/Raleway-Regular.ttf) format("truetype");
+  font-weight: 300;
+}
+
+section {
+  padding: 0 1em;
+}
+
 h1 {
   &.mat-display-2,
   &.mat-display-4 {
     margin-bottom: 0;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
   }
 }
 
@@ -11,7 +23,74 @@ h2 {
   }
 }
 
-#description {
-  margin-top: -.35px;
-  margin-bottom: 0;
+p#description {
+  margin: 0 0 0 -40px;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.135rem;
+  line-height: 0;
+  font-size: 0.5rem;
+  // Desktop styles
+  @media(min-width: 960px) {
+    margin-left: -375px;
+    font-size: 0.9rem;
+  }
+}
+
+.mat-flat-button {
+  width: 95%;
+  margin-top: 2em;
+  // Desktop styles
+  @media(min-width: 960px) {
+    margin-left: auto;
+    margin-right: 16px;
+    margin-top: -4px;
+    width: 25%;
+  }
+
+  &:hover {
+    background-color: rgb(33, 33, 31);
+    transition: all 0.5s ease;
+  }
+}
+
+.mat-icon {
+  height: 13px;
+  // Desktop styles
+  @media(min-width: 960px) {
+    height: 20px;
+  }
+
+  &#twitter {
+    &:hover,
+    &:active {
+      color: #1da1f2;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#facebook {
+    &:hover,
+    &:active {
+      color: #3b5998;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#github {
+    &:hover,
+    &:active {
+      opacity: 0.6;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &#linkedin {
+    &:hover,
+    &:active {
+      color: #1a85bc;
+      transition: all 0.5s ease;
+    }
+  }
 }
