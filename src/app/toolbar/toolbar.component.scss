@@ -1,3 +1,17 @@
 mat-toolbar {
   background: transparent;
+  & mat-toolbar-row {
+    @media(min-width: 768px){
+      width: 75%;
+      align-self: center;
+      & a:hover:not(:focus) {
+        color: #f44336;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+
+.color-dark {
+  color: rgb(0, 0, 0, 0.87) !important;
 }
