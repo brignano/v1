@@ -15,10 +15,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.typingCallback(this);
   }
 
   ngAfterViewInit() {
+    this.typingCallback(this);
   }
 
   typingCallback(that) {
