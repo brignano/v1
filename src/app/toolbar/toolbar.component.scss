@@ -5,7 +5,7 @@ mat-toolbar {
       width: 75%;
       align-self: center;
       & a:hover {
-        color: rgb(0, 0, 0, 0.87);
+        color: rgb(0, 0, 0, 0.87) !important;
         transition: all 0.5s ease;
       }
     }
@@ -18,6 +18,6 @@ mat-toolbar {
   letter-spacing: 0.1rem;
 }
 
-.color-dark {
-  color: rgb(0, 0, 0, 0.87) !important;
+.color-dark:not(.mat-primary) {
+  color: rgb(0, 0, 0, 0.87);
 }
