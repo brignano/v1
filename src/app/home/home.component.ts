@@ -1,7 +1,34 @@
 import { AfterViewInit, Component, HostBinding, OnInit } from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
+  animations: [
+    trigger(
+      'enterAnimation_h1', [
+        transition(':enter', [
+          style({transform: 'translateY(-20%)', opacity: 0.2}),
+          animate('1000ms', style({transform: 'translateY(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('1000ms', style({transform: 'translateY(-20%)', opacity: 0.2}))
+        ])
+      ]
+    ),
+    trigger(
+      'enterAnimation_contactBtn', [
+        transition(':enter', [
+          style({opacity: 0}),
+          animate('1000ms', style({opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({opacity: 1}),
+          animate('1000ms', style({opacity: 0}))
+        ])
+      ]
+    )
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
